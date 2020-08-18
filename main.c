@@ -6,11 +6,11 @@
 
 int main (){
 	/*init PORTB as output */
-	DDRB = 0b00000001; 	//can be replaced with masked value DDRB |= (1 << PB0)
+	DDRB |= (1<<0); 	
 
 	/*Loop*/
 	while(1){
-		PORTB = 0b00000001; //Toggling the output of PB0
+		PORTB |= (1<<0);    //Toggling the output of PB0
 		_delay_ms(1000);    //1 sec delay
 	}
 }

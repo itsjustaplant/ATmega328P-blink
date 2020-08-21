@@ -1,0 +1,6 @@
+/Users/alperen/Desktop/demo/firmware/build/CMakeFiles/hex.dir
+/Users/alperen/Desktop/demo/firmware/build/CMakeFiles/edit_cache.dir
+/Users/alperen/Desktop/demo/firmware/build/CMakeFiles/rebuild_cache.dir
+/Users/alperen/Desktop/demo/firmware/build/CMakeFiles/blink.dir
+/Users/alperen/Desktop/demo/firmware/build/CMakeFiles/strip.dir
+/Users/alperen/Desktop/demo/firmware/build/CMakeFiles/flash.dir

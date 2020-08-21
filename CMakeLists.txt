@@ -48,6 +48,6 @@ add_custom_target(hex ALL /Users/alperen/Downloads/Arduino.app/Contents/Java/har
 
 #https://cmake.org/cmake/help/latest/command/add_custom_target.html
 
-add_custom_target(flash /Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avrdude -C /usr/local/CrossPack-AVR-20131216/etc/avrdude.conf -p ${MCU} -c ${PROGRAMMER} -F -B 10 -U lfuse:w:0x62:m -U hfuse:w:0xd9:m -U efuse:w:0x07:m -U flash:w:m:${PRODUCT_NAME}.hex DEPENDS hex)
+add_custom_target(flash /Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avrdude -C /usr/local/CrossPack-AVR-20131216/etc/avrdude.conf -p ${MCU} -c ${PROGRAMMER} -F -B 10 -U lfuse:w:0x62:m -U hfuse:w:0xd9:m -U efuse:w:0x07:m -U flash:w:"/Users/alperen/desktop/demo/firmware/build/${PRODUCT_NAME}.hex":i DEPENDS hex)
 
 #clean

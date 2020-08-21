@@ -1,1 +1,0 @@
-/Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avr-gcc  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -mmcu=atmega328p CMakeFiles/blink.elf.dir/src/main.c.o -o blink.elf 

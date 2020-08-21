@@ -62,10 +62,10 @@ RM = /usr/local/Cellar/cmake/3.18.0/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/alperen/Desktop/demo/firmware
+CMAKE_SOURCE_DIR = /Users/alperen/desktop/Demo/firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/alperen/Desktop/demo/firmware/build
+CMAKE_BINARY_DIR = /Users/alperen/desktop/Demo/firmware/build
 
 # Utility rule file for hex.
 
@@ -90,6 +90,6 @@ CMakeFiles/hex.dir/clean:
 .PHONY : CMakeFiles/hex.dir/clean
 
 CMakeFiles/hex.dir/depend:
-	cd /Users/alperen/Desktop/demo/firmware/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alperen/Desktop/demo/firmware /Users/alperen/Desktop/demo/firmware /Users/alperen/Desktop/demo/firmware/build /Users/alperen/Desktop/demo/firmware/build /Users/alperen/Desktop/demo/firmware/build/CMakeFiles/hex.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/alperen/desktop/Demo/firmware/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alperen/desktop/Demo/firmware /Users/alperen/desktop/Demo/firmware /Users/alperen/desktop/Demo/firmware/build /Users/alperen/desktop/Demo/firmware/build /Users/alperen/desktop/Demo/firmware/build/CMakeFiles/hex.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hex.dir/depend
 

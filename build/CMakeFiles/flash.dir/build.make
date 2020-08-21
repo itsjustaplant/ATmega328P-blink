@@ -62,10 +62,10 @@ RM = /usr/local/Cellar/cmake/3.18.0/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/alperen/Desktop/demo/firmware
+CMAKE_SOURCE_DIR = /Users/alperen/desktop/Demo/firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/alperen/Desktop/demo/firmware/build
+CMAKE_BINARY_DIR = /Users/alperen/desktop/Demo/firmware/build
 
 # Utility rule file for flash.
 
@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /Users/alperen/Desktop/demo/firmware/build
 include CMakeFiles/flash.dir/progress.make
 
 CMakeFiles/flash:
-	/Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avrdude -C /usr/local/CrossPack-AVR-20131216/etc/avrdude.conf -p atmega328p -c usbasp -F -B 10 -U lfuse:w:0x62:m -U hfuse:w:0xd9:m -U efuse:w:0x07:m -U flash:w:m:blink.hex
+	/Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avrdude -C /usr/local/CrossPack-AVR-20131216/etc/avrdude.conf -p atmega328p -c usbasp -F -B 10 -U lfuse:w:0x62:m -U hfuse:w:0xd9:m -U efuse:w:0x07:m -U flash:w:"/Users/alperen/desktop/demo/firmware/build/blink.hex":i
 
 flash: CMakeFiles/flash
 flash: CMakeFiles/flash.dir/build.make
@@ -90,6 +90,6 @@ CMakeFiles/flash.dir/clean:
 .PHONY : CMakeFiles/flash.dir/clean
 
 CMakeFiles/flash.dir/depend:
-	cd /Users/alperen/Desktop/demo/firmware/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alperen/Desktop/demo/firmware /Users/alperen/Desktop/demo/firmware /Users/alperen/Desktop/demo/firmware/build /Users/alperen/Desktop/demo/firmware/build /Users/alperen/Desktop/demo/firmware/build/CMakeFiles/flash.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/alperen/desktop/Demo/firmware/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alperen/desktop/Demo/firmware /Users/alperen/desktop/Demo/firmware /Users/alperen/desktop/Demo/firmware/build /Users/alperen/desktop/Demo/firmware/build /Users/alperen/desktop/Demo/firmware/build/CMakeFiles/flash.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/flash.dir/depend
 

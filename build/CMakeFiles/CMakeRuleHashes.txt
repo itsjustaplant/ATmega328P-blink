@@ -1,4 +1,5 @@
 # Hashes of file build rules.
-a52b7928b12810e141488c98bb0ffa16 CMakeFiles/flash
+d36926ee86069bb0b271f933c5d440bc CMakeFiles/clear
+dcd1db6b33aae34904748167288cd8d8 CMakeFiles/flash
 5f3993baf9d9917beb39a4ab9336de04 CMakeFiles/hex
 dd57c10a4ce8289dba217472f08e1f60 CMakeFiles/strip

@@ -49,6 +49,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/clear.dir/DependInfo.cmake"
   "CMakeFiles/hex.dir/DependInfo.cmake"
   "CMakeFiles/blink.dir/DependInfo.cmake"
   "CMakeFiles/strip.dir/DependInfo.cmake"

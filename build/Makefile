@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named clear
+
+# Build rule for target.
+clear: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clear
+.PHONY : clear
+
+# fast build rule for target.
+clear/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clear.dir/build.make CMakeFiles/clear.dir/build
+.PHONY : clear/fast
+
+#=============================================================================
 # Target rules for targets named hex
 
 # Build rule for target.
@@ -216,6 +229,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... clear"
 	@echo "... flash"
 	@echo "... hex"
 	@echo "... strip"

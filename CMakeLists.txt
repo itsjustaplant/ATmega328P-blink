@@ -14,10 +14,12 @@ set(efuse 0xff)
 
 #https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/CrossCompiling
 #If target is an embedded system set CMAKE_SYSTEM_NAME Generic
-
 set(CMAKE_SYSTEM_NAME Generic)
+
 set(CMAKE_C_COMPILER /Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avr-gcc)
 
+#It is important to specify the MCU type when linking. The compiler uses the -mmcu option to choose start-up files and run-time libraries that get linked together. If this option isn't specified, the compiler defaults to the 8515 processor environment, which is most certainly what you didn't want.
+#https://www.nongnu.org/avr-libc/user-manual/group__demo__project.html#:~:text=It%20is%20important%20to%20specify%20the%20MCU%20type%20when%20linking.
 set(CMAKE_EXE_LINKER_FLAGS -mmcu=${MCU})
 
 add_definitions(
@@ -30,14 +32,16 @@ add_compile_options(
 	-Wall 
 	-Os
 	)	
-
-file(GLOB SRC_FILES "src/*.c") # Load all files in src folder
+#Load all files in src folder
+file(GLOB SRC_FILES "src/*.c") 
 
 # Create one target
 add_executable(${PRODUCT_NAME} ${SRC_FILES})
 
 #change the format to .elf
 set_target_properties(${PRODUCT_NAME} PROPERTIES OUTPUT_NAME ${PRODUCT_NAME}.elf)
+
+#https://cmake.org/cmake/help/latest/command/add_custom_target.html
 
 #binary must be stripped to remove debugging symbols
 add_custom_target(strip ALL /Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avr-strip ${PRODUCT_NAME}.elf DEPENDS ${PRODUCT_NAME})
@@ -46,8 +50,8 @@ add_custom_target(strip ALL /Users/alperen/Downloads/Arduino.app/Contents/Java/h
 #creating hex file from elf by objcopy
 add_custom_target(hex ALL /Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avr-objcopy -j .text -j .data  -O ihex ${PRODUCT_NAME}.elf ${PRODUCT_NAME}.hex DEPENDS strip)
 
-#https://cmake.org/cmake/help/latest/command/add_custom_target.html
+#flashing rom
+add_custom_target(flash /Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avrdude -C /usr/local/CrossPack-AVR-20131216/etc/avrdude.conf -p ${MCU} -c ${PROGRAMMER} -F -B 10 -U lfuse:w:0x62:m -U hfuse:w:0xd9:m -U efuse:w:0x07:m -U flash:w:"${PRODUCT_NAME}.hex":i DEPENDS hex)
 
-add_custom_target(flash /Users/alperen/Downloads/Arduino.app/Contents/Java/hardware/tools/avr/bin/avrdude -C /usr/local/CrossPack-AVR-20131216/etc/avrdude.conf -p ${MCU} -c ${PROGRAMMER} -F -B 10 -U lfuse:w:0x62:m -U hfuse:w:0xd9:m -U efuse:w:0x07:m -U flash:w:"/Users/alperen/desktop/demo/firmware/build/${PRODUCT_NAME}.hex":i DEPENDS hex)
-
-#clean
+#clear
+add_custom_target(clear rm -rf ${PRODUCT_NAME}.hex ${PRODUCT_NAME}.elf)

@@ -39,7 +39,7 @@ avrdude: initialization failed, rc=-1
 
 **That means your programmer and chip cannot communicate with each other, so you better check your connections again**
 
-##How to build
+## How to build
 
 1- Go into /build folder
 

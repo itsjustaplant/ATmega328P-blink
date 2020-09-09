@@ -68,8 +68,8 @@ https://www.engbedded.com/fusecalc/ -> **fuse calculator**
 http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf -> **official datasheet**
 ## Issues
 
-1- `flash` command  doesn't work actually 
-	
+1- `flash` command  doesn't work (SOLVED by adding avrdude config file)	
 As plant said once
+
 
 >I'm just a plant making sphagetti da ba de

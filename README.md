@@ -43,9 +43,9 @@ avrdude: initialization failed, rc=-1
 
 1- Go into /build folder
 
-2- Run 'cmake ..'
+2- Run `cmake ..`
 
-3- Run 'make'
+3- Run `make`
 
 ## Tips and Recommendations
 
@@ -68,7 +68,7 @@ https://www.engbedded.com/fusecalc/ -> **fuse calculator**
 http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf -> **official datasheet**
 ## Issues
 
-1- 'flash' command  doesn't work actually 
+1- `flash` command  doesn't work actually 
 	
 As plant said once
 

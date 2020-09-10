@@ -53,11 +53,8 @@ avrdude: initialization failed, rc=-1
 
 -You **don't** have to set your fuses you can use default fuses
 
--**Don't** just binary values to registers. Use masking and bit shifting
+-**Don't** just assign binary values to registers. Use masking and bit shifting
 
--If you are on mac and having problem with 32 bit avr toolchain, download Arduino . It comes with avr toolchain and it works *magic* 
-
-*Arduino.app/Contents/Java/hardware/tools/avr/bin/* check this folder
 
 ## Resources
 
@@ -66,10 +63,11 @@ https://markvanderlaan.nl/2019-10-25-avr-c-bitshifting/ -> **bit shifting**
 https://www.engbedded.com/fusecalc/ -> **fuse calculator**
 
 http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf -> **official datasheet**
+
 ## Issues
 
 1- `flash` command  doesn't work (SOLVED by adding avrdude config file)	
-As plant said once
 
+As plant said once 
 
 >I'm just a plant making sphagetti da ba de
